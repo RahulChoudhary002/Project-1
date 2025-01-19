@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects and Arrays Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h1 {
+            color: #4CAF50;
+        }
+
+        .container {
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .output {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Objects and Arrays Example</h1>
+    <div class="container">
+        <h2>Output:</h2>
+        <div id="output" class="output"></div>
+    </div>
+
+    <script>
+        const person = {
+            name: "Rahul Choudhary",
+            age: 15,
+            hobby: "Basketball",
+            city: "Jaipur"
+        };
+
+        const fruits = ["Apple", "Banana", "Cherry", "Dates", "Elderberry"];
+
+        let output = "";
+        output += `<p><strong>Person's Name:</strong> ${person.name}</p>`;
+        output += `<p><strong>Person's Age:</strong> ${person.age}</p>`;
+        output += `<p><strong>Person's Hobby:</strong> ${person.hobby}</p>`;
+        output += `<p><strong>Person's City:</strong> ${person.city}</p>`;
+
+        output += `<p><strong>Array of Fruits:</strong> ${fruits.join(", ")}</p>`;
+        output += `<p><strong>First Fruit:</strong> ${fruits[0]}</p>`;
+        output += `<p><strong>Second Fruit:</strong> ${fruits[1]}</p>`;
+        output += `<p><strong>Last Fruit:</strong> ${fruits[fruits.length - 1]}</p>`;
+
+        const removedFruit = fruits.pop();
+        output += `<p><strong>Removed Fruit:</strong> ${removedFruit}</p>`;
+        output += `<p><strong>Array after pop:</strong> ${fruits.join(", ")}</p>`;
+
+        document.getElementById("output").innerHTML = output;
+    </script>
+</body>
+
+</html>
